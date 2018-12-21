@@ -1,0 +1,5 @@
+[user]
+	name = Hiroki Matsuda
+#	email =
+[core]
+	excludesfile = ~/.config/git/.gitignore
