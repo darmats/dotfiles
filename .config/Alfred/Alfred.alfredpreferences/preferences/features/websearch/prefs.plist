@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>0D860F74-2BB2-4D8B-AF9A-9EF1E177DB82</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>je</string>
+			<key>text</key>
+			<string>Google Translate(Ja -&gt; En)</string>
+			<key>url</key>
+			<string>https://translate.google.co.jp/#ja/en/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>98B4FFDF-311D-4AC2-BB04-B214B347466F</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ej</string>
+			<key>text</key>
+			<string>Google Translate(En -&gt; Ja)</string>
+			<key>url</key>
+			<string>https://translate.google.co.jp/#en/ja/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>B726194F-8374-4E0D-8C2D-7A25C9C5572A</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>alc</string>
+			<key>text</key>
+			<string>スペースアルク</string>
+			<key>url</key>
+			<string>https://eow.alc.co.jp/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E7483089-0964-46BA-B7D0-399F3D10EE59</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>php</string>
+			<key>text</key>
+			<string>PHP.net</string>
+			<key>url</key>
+			<string>https://php.net/manual-lookup.php?pattern={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
