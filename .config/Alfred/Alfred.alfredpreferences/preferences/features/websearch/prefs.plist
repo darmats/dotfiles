@@ -30,6 +30,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>69E3629C-C5C1-46DA-82DD-F8C0DDD08076</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gl</string>
+			<key>text</key>
+			<string>GitLab (darmats)</string>
+			<key>url</key>
+			<string>https://gitlab.com/darmats</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>98B4FFDF-311D-4AC2-BB04-B214B347466F</key>
 		<dict>
 			<key>enabled</key>
