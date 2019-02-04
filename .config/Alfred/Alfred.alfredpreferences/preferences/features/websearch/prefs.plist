@@ -82,6 +82,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>F2FF5DBB-5186-4800-943E-737679BF5E0B</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>gist</string>
+			<key>text</key>
+			<string>gist (darmats)</string>
+			<key>url</key>
+			<string>https://gist.github.com/darmats</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
