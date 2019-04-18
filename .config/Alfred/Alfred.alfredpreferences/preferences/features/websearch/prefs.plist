@@ -56,6 +56,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>AAB52319-A38E-478E-9E53-7F71096C3B84</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ejj</string>
+			<key>text</key>
+			<string>Web Site Translate (En -&gt; Ja)</string>
+			<key>url</key>
+			<string>https://translate.google.co.jp/translate?sl=en&amp;tl=ja&amp;u={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>B726194F-8374-4E0D-8C2D-7A25C9C5572A</key>
 		<dict>
 			<key>enabled</key>
