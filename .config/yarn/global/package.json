@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@angular/cli": "^8.0.1",
     "@aws-amplify/cli": "^1.6.8",
     "@vue/cli": "^3.5.5",
     "prettier": "^1.17.1",
