@@ -4,6 +4,9 @@
 ignores/
 **/ignores/
 
+.idea/laravel-plugin.xml
+**/.idea/laravel-plugin.xml
+
 
 # Laravel IDE helper
 _ide_helper.php
