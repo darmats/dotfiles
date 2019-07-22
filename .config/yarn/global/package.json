@@ -5,6 +5,7 @@
     "@vue/cli": "^3.5.5",
     "generator-botkit": "^4.0.3",
     "prettier": "^1.17.1",
+    "ts-node": "^8.3.0",
     "typescript": "^3.4.5",
     "yo": "^2.0.6"
   }
