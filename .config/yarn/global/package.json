@@ -3,6 +3,7 @@
     "@angular/cli": "^8.0.1",
     "@aws-amplify/cli": "^1.6.8",
     "@vue/cli": "^3.5.5",
+    "aws-cdk": "^1.11.0",
     "generator-botkit": "^4.0.3",
     "prettier": "^1.17.1",
     "ts-node": "^8.3.0",
