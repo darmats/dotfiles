@@ -17,5 +17,7 @@
 	<integer>1</integer>
 	<key>persistForImages</key>
 	<integer>1</integer>
+	<key>snippetKeyword</key>
+	<string>s</string>
 </dict>
 </plist>
