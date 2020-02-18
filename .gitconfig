@@ -3,3 +3,4 @@
 	email = h.matsu0330@gmail.com
 [core]
 	excludesfile = ~/.config/git/.gitignore
+	ignorecase = false
