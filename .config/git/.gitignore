@@ -4,9 +4,12 @@ docker-compose.override.yml
 
 ignores/
 **/ignores/
+ignores_bin/
 
 .idea/laravel-plugin.xml
 **/.idea/laravel-plugin.xml
+.idea/aws.xml
+**/.idea/aws.xml
 
 
 # Laravel IDE helper
