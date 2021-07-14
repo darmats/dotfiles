@@ -2,8 +2,11 @@
 .envrc
 docker-compose.override.yml
 
+.ignores/
 ignores/
+**/.ignores/
 **/ignores/
+.ignores_bin/
 ignores_bin/
 
 .idea/laravel-plugin.xml
