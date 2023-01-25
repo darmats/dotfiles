@@ -1,8 +1,7 @@
 [user]
-	name = Hiroki Matsuda
-	email = h.matsu0330@gmail.com
+	name =
+	email =
 [core]
-	excludesfile = ~/.config/git/.gitignore
 	ignorecase = false
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f

@@ -9,7 +9,38 @@ if [ -f ~/.zsh/pre.zsh ]; then
   source ~/.zsh/pre.zsh
 fi
 
-source ${HOME}/repos/src/github.com/darmats/sh.conf/entrypoint.zsh
+
+
+zstyle -T ':completion:*:*:git:*' tag-order && \
+  zstyle ':completion:*:*:git:*' tag-order 'alias-commands' 'common-commands'
+
+# Lines configured by zsh-newuser-install
+# HISTFILE=~/.histfile
+if [ ! -d ~/.zsh ]; then
+  mkdir ~/.zsh
+fi
+HISTFILE=~/.zsh/histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '$($HOME)/.zshrc'
+# zstyle :compinstall filename '$(${CNF_ROOT})/entrypoint.zsh'
+
+# autoload -Uz compinit
+# compinit
+# End of lines added by compinstall
+
+# shell
+setopt hist_ignore_dups
+
+
+
+source ~/.dotfiles/root.zsh
+
+autoload -Uz compinit
+compinit
 
 if [ -f ~/.zsh/post.zsh ]; then
   source ~/.zsh/post.zsh
