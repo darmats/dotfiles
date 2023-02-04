@@ -81,20 +81,10 @@ alias glgma="glgm --all"
 alias glc='git shortlog -sn --no-merges'
 alias gsw='git switch'
 function gswf() {
-  if [ $# -eq 0 ]; then
-    echo "Usage: gswf [feature-name]"
-    return 1
-  else
-    git switch feature/$1
-  fi
-}
-function gswh() {
-  if [ $# -eq 0 ]; then
-    echo "Usage: gswh [hotfix-name]"
-    return 1
-  else
-    git switch hotfix/$1
-  fi
+  local branches branch
+  branches=$(git --no-pager branch -vv) &&
+  branch=$(echo "$branches" | fzf) &&
+  git switch $(echo "$branch" | cut -c 3- | awk '{print $1}')
 }
 alias gswc='git switch -c'
 function gswcf() {
@@ -120,6 +110,9 @@ alias glsremote='git config -l | grep $(_git_current_branch)'
 alias gsetremote='git branch -u origin/$(_git_current_branch)'
 alias gunsetremote='git config --unset branch.$(_git_current_branch).merge && git config --unset branch.$(_git_current_branch).remote'
 
+alias gskip='git update-index --skip-worktree'
+alias gckskip='git ls-files -v | grep ^S'
+alias gnoskip='git update-index --no-skip-worktree'
 
 
 source $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/git/git-prompt.zsh
