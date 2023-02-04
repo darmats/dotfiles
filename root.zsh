@@ -7,10 +7,13 @@ load_config() {
     shell
     brew
     docker
+    direnv
+    fzf
     golang
-      direnv
       ghq
       git
+    rust
+    volta
   )
 
   for name in $list; do

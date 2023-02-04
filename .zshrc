@@ -1,5 +1,5 @@
 #CONF_ZSH_PROMPT=$'%m:%F{cyan}%n%f %F{yellow}%c%f $(git_status)%% '
-CONF_ZSH_PROMPT=$'%{$fg[white]%}%n@%m${_RESET_COLOR} %{$fg[green]%}$(shpwd)${_RESET_COLOR} $(git_status)> '
+CONF_ZSH_PROMPT=$'%{$fg[white]%}%n@%m${_RESET_COLOR} %{$fg[green]%}$(shpwd)${_RESET_COLOR} $(git_status)\n> '
 
 if [ ! -d ~/.zsh ]; then
   mkdir ~/.zsh
@@ -34,7 +34,7 @@ zstyle :compinstall filename '$($HOME)/.zshrc'
 
 # shell
 setopt hist_ignore_dups
-
+disable r
 
 
 source ~/.dotfiles/root.zsh

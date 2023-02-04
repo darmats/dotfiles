@@ -18,21 +18,29 @@ setup() {
     rm -f ~/.zcompdump
   fi
 
+  cd ${DOTFILES_DIR}
+  if [ ! -f .gitconfig ]; then
+    cp .gitconfig.example .gitconfig
+  fi
+
   cd ${HOME}
   if [ ! -L .zshrc ]; then
     ln -s .dotfiles/.zshrc .zshrc
   fi
-  if [ ! -L .config ]; then
-    ln -s .dotfiles/.config .config
+  if [ ! -L .gitconfig ]; then
+    ln -s .dotfiles/.gitconfig .gitconfig
+  fi
+  if [ ! -d .config ]; then
+    mkdir .config
+  fi
+
+  cd ${HOME}/.config
+  if [ ! -L git ]; then
+    ln -s ../.dotfiles/.config/git git
   fi
 
   if [ ! -f ${HOME}/repos/bin/gitstatus ]; then
     GOPATH=$HOME/repos go install github.com/darmats/go-gitstatus/gitstatus@latest
-  fi
-
-  cd ${DOTFILES_DIR}
-  if [ ! -f .gitconfig ]; then
-    cp .gitconfig.example .gitconfig
   fi
 }
 

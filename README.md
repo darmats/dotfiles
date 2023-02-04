@@ -2,9 +2,9 @@
 
 ## Preparation
 
+- Clone this repository in home directory
+  - e.g. `git clone git@github.com:darmats/dotfiles.git ~/.dotfiles`
 - Install homebrew
-- Generate ssh key and register to GitHub
-- Clone this repository
-  - `git clone git@github.com:darmats/dotfiles.git ~/.dotfiles`
+  - https://brew.sh/
 - Setup
   - `cd ~/.dotfiles && ./setup.sh`
