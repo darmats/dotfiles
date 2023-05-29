@@ -2,6 +2,26 @@ if [ -z $(command -v gitstatus) ]; then
   return
 fi
 
+GIT_DIRNAME_PREFIX="["
+GIT_DIRNAME_SUFFIX="]"
+git_dirname() {
+  local dir=$(g-dir)
+  if [ -z ${dir} ]; then
+    return
+  fi
+  echo ${GIT_DIRNAME_PREFIX}${dir}${GIT_DIRNAME_SUFFIX}
+}
+
+GIT_REPONAME_PREFIX="["
+GIT_REPONAME_SUFFIX="]"
+git_reponame() {
+  local repo=$(g-repo)
+  if [ -z ${repo} ]; then
+    return
+  fi
+  echo ${GIT_REPONAME_PREFIX}${repo}${GIT_DIRNAME_SUFFIX}
+}
+
 # override
 git_status() {
   if [ "${CONF_USE_GITSTATUSD}" != "1" ]; then

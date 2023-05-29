@@ -13,6 +13,12 @@ shpwd() {
   fi
 }
 
+git_dirname() {
+}
+
+git_reponame() {
+}
+
 git_status() {
 }
 
