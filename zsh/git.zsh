@@ -114,14 +114,29 @@ alias gskip='git update-index --skip-worktree'
 alias gckskip='git ls-files -v | grep ^S'
 alias gnoskip='git update-index --no-skip-worktree'
 
+function g-dir() {
+  local dir=$(git rev-parse --show-toplevel 2> /dev/null)
+  if [ -z ${dir} ]; then
+    return 1
+  fi
+  basename ${dir}
+}
+function g-repo() {
+  local url=$(git config --get remote.origin.url)
+  if [ -z ${url} ]; then
+    return 1
+  fi
+  basename -s .git ${url}
+}
+
 
 source $(cd $(dirname ${BASH_SOURCE:-$0}); pwd)/git/git-prompt.zsh
 
 # for c in {000..255}; do echo -n "\e[38;5;${c}m $c" ; [ $(($c%16)) -eq 15 ] && echo;done;echo
 # GIT_BASE_COLOR="%{\e[38;5;110m%}"
 GIT_BASE_COLOR="%{$fg[white]%}"
-ZSH_THEME_GIT_PROMPT_PREFIX="${GIT_BASE_COLOR}["
-ZSH_THEME_GIT_PROMPT_SUFFIX="${GIT_BASE_COLOR}]${_RESET_COLOR}"
+ZSH_THEME_GIT_PROMPT_PREFIX="${GIT_BASE_COLOR}("
+ZSH_THEME_GIT_PROMPT_SUFFIX="${GIT_BASE_COLOR})${_RESET_COLOR}"
 ZSH_THEME_GIT_PROMPT_SEPARATOR="${GIT_BASE_COLOR}|"
 ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}"
