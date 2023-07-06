@@ -49,9 +49,9 @@ alias gpso='git push -u origin HEAD'
 alias grb='git rebase'
 function grbi() {
   if [ $# -eq 0 ]; then
-    git rebase -i
+    git rebase -i --committer-date-is-author-date
   else
-    git rebase -i HEAD~$1
+    git rebase -i HEAD~$1 --committer-date-is-author-date
   fi
 }
 alias grbc='git rebase --continue'
