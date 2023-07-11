@@ -1,12 +1,19 @@
 case "${OSTYPE}" in
   darwin* )
-    alias l='ls -1G'
     alias ls='ls -G'
-    alias ll='ls -lG'
-    alias la='ls -lGa'
     alias lh='ls -lhG'
+    if [ -z $(command -v exa) ]; then
+      alias l='ls -1G'
+      alias ll='ls -lG'
+      alias la='ls -lGa'
+    else
+      alias l='exa -1 --git'
+      alias ll='exa -l --git'
+      alias la='exa -la --git'
+      alias lb='exa -lB --git'
+      alias lab='exa -laB --git'
+    fi
     alias tlf='tail -f'
-    alias relogin="exec $(which ${CNF_SHELL}) -l"
     alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
     ;;
   linux* )
