@@ -56,8 +56,8 @@ function grbi() {
 }
 alias grbc='git rebase --continue'
 alias greset='git reset'
-alias gca='git commit --amend --cleanup=scissors'
-alias gcan='git commit --amend --no-edit'
+alias gca='GIT_COMMITTER_DATE=$(git log -1 --format=%aD) git commit --amend --cleanup=scissors'
+alias gcan='GIT_COMMITTER_DATE=$(git log -1 --format=%aD) git commit --amend --no-edit'
 function gcm() {
   if [ $# -eq 0 ]; then
     git commit --cleanup=scissors
