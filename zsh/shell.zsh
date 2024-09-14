@@ -2,16 +2,16 @@ case "${OSTYPE}" in
   darwin* )
     alias ls='ls -G'
     alias lh='ls -lhG'
-    if [ -z $(command -v exa) ]; then
+    if [ -z $(command -v eza) ]; then
       alias l='ls -1G'
       alias ll='ls -lG'
       alias la='ls -lGa'
     else
-      alias l='exa -1 --git'
-      alias ll='exa -l --git'
-      alias la='exa -la --git'
-      alias lb='exa -lB --git'
-      alias lab='exa -laB --git'
+      alias l='eza -1 --git'
+      alias ll='eza -l --git'
+      alias la='eza -la --git'
+      alias lb='eza -lB --git'
+      alias lab='eza -laB --git'
     fi
     alias tlf='tail -f'
     alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
