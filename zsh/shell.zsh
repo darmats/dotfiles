@@ -15,6 +15,8 @@ case "${OSTYPE}" in
     fi
     alias tlf='tail -f'
     alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
+    alias date-ymd='date +"%Y%m%d"'
+    alias date-ymdhms='date +"%Y%m%d%H%M%S"'
     ;;
   * )
     echo "Unexpected \${OSTYPE}: ${OSTYPE}"
