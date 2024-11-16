@@ -16,20 +16,6 @@ case "${OSTYPE}" in
     alias tlf='tail -f'
     alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
     ;;
-  linux* )
-    alias cp='cp -i'
-    alias egrep='egrep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias grep='grep --color=auto'
-    alias l='ls -1 --color=auto'
-    alias l.='ls -d .* --color=auto'
-    alias ls='ls --color=auto'
-    alias ll='ls -l --color=auto'
-    alias la='ls -la --color=auto'
-    alias lh='ls -lha --color=auto'
-    alias mv='mv -i'
-    alias rm='rm -i'
-    ;;
   * )
     echo "Unexpected \${OSTYPE}: ${OSTYPE}"
     ;;
